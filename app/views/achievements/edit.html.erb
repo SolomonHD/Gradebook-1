@@ -2,9 +2,9 @@
 
 <%= form_tag update do %>
 <ul>
-  <% @tags.each do |t| %>
+  <% @achievements.each do |t| %>
   <li>
-    <%= check_box_tag "tags[#{t.id}]", true, @photo.tags.include?(t) %>
+    <%= check_box_tag "achievment[#{t.id}]", true, @student.achievements.include?(t) %>
     <%= t.name %>
   </li>
   <% end %>
