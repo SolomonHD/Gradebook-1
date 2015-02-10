@@ -11,15 +11,7 @@ Rails.application.routes.draw do
   post 'login/changepassword'
   get 'login/changepassword'
   resources :parents
-  resources :teachers do
-    member do
-      get edit_achievments
-      post update_achievements
-    end
-    collection do
-      get 'dashboard'
-    end 
-    end
+  resources :teachers
   resources :students
 
 
