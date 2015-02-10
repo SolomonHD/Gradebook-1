@@ -1,9 +1,8 @@
 class Student < ActiveRecord::Base
+  has_many_and_belongs_to :achievements
   has_secure_password
-
   has_many :grades
   has_many :parents
-
   belongs_to :teacher
 
   def self.get_all_children_for_teacher_id( teacher_id )
