@@ -1,4 +1,4 @@
 class Achievement < ActiveRecord::Base
-  has_many_and_belongs_to :teachers
-  has_many_and_belongs_to :students
+  has_and_belongs_to_many :teachers
+  has_and_belongs_to_many :students
 end

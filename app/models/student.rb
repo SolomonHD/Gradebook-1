@@ -1,5 +1,5 @@
 class Student < ActiveRecord::Base
-  has_many_and_belongs_to :achievements
+  has_and_belongs_to_many :achievements
   has_secure_password
   has_many :grades
   has_many :parents
