@@ -1,6 +1,17 @@
-<h1>Editing Achievement</h1>
+<h1>Edit Achievement for <%= @student.name %></h1>
 
-<%= render 'form' %>
+<%= form_tag update do %>
+<ul>
+  <% @tags.each do |t| %>
+  <li>
+    <%= check_box_tag "tags[#{t.id}]", true, @photo.tags.include?(t) %>
+    <%= t.name %>
+  </li>
+  <% end %>
+</ul>
+
+<%= submit_tag "Save Achievements" %>
+<% end %>
 
 <%= link_to 'Show', @achievement %> |
 <%= link_to 'Back', achievements_path %>
